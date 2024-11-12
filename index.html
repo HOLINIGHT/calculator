@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8"></meta>
+    <meta charset="UTF-8">
     <title>Калькулятор</title>
-    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
 </head>
 <body>
-    <!-- поле ввода первого числа -->
-    <input id="num1" />
+    <div class="container">
+        <h1>Калькулятор</h1>
+        <!-- поле ввода первого числа -->
+        <input id="num1" class="number-input" placeholder="Введите первое число" type="number"/>
 
-    <!-- блок с кнопками -->
-    <div id="operator-btns">
-        <button id="plus" onclick="op='+'">+</button>
-        <button id="minus" onclick="op='-'">-</button>
-        <button id="times" onclick="op='*'">*</button>
-        <button id="devide" onclick="op=':'">:</button>
+        <!-- блок с кнопками -->
+        <div id="operator-btns"  style="margin-bottom: 10px;">
+            <button id="plus" class="operator-btn" onclick="op='+'">+</button>
+            <button id="minus" class="operator-btn" onclick="op='-'">-</button>
+            <button id="times" class="operator-btn" onclick="op='*'">*</button>
+            <button id="devide" class="operator-btn" onclick="op=':'">:</button>
+        </div>
+
+        <!-- поле ввода второго числа -->
+        <input id="num2" class="number-input" placeholder="Введите второе число" type="number"/>
+        
+        <!-- кнопка для расчетов -->
+        <button class="calculate-btn" onclick="func()">Посчитать</button>
+
+        <!-- место для отображения результата -->
+        <p id="result" class="result-text"></p>
     </div>
-
-    <!-- поле ввода второго числа -->
-    <input id="num2" />
-    <br>
-
-    <!-- кнопка для расчетов -->
-    <button onclick="func()">Посчитать</button>
-
-    <p id="result"></p>
 </body>
 </html>
